@@ -1,0 +1,16 @@
+<h1 class="text-uppercase text-center fw-bold mt-5">Rick & Morty</h1>
+
+<ul class="d-flex justify-content-center gap-5 mt-5">
+  <button class="border-0 bg-white" (click)="filterCharacters('')">All</button>
+  <button class="border-0 bg-white" (click)="filterCharacters('alive')">Alive</button>
+  <button class="border-0 bg-white" (click)="filterCharacters('dead')">Dead</button>
+  <button class="border-0 bg-white" (click)="filterCharacters('unknown')">Unknown</button>
+</ul>
+
+<div class="row">
+  <div class="d-flex justify-content-center gap-5 mt-5 col-md-3 col-6" *ngFor="let character of loadMoreCh">
+    <app-card-character [character]="character"></app-card-character>
+  </div>
+  <button class="border-0 bg-white btnLoad my-5" (click)="loadMore()">Load More</button>
+</div>
+

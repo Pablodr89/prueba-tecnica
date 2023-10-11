@@ -1,0 +1,48 @@
+<div class="d-flex flex-column align-items-start align-items-md-center marginTop">
+  <div class="d-flex flex-md-column align-items-center">
+    <img [src]="character.image" alt="" class="img-fluid imgCircle">
+    <div class="d-flex flex-column align-items-start align-items-md-center ps-4">
+      <h4 class="text-center my-4 fw-bold colorBlue">{{ character.name }}</h4>
+      <p class="text-center colorGrey pb-2 fs-4"><span class="fw-bold"
+        [ngClass]="{'colorGreen': character.status === 'Alive', 'colorRed': character.status === 'Dead', 'text-info': character.status === 'unknown'}">
+        {{character.status}}</span> | {{character.species}} | {{character.gender}}</p>
+    </div>
+  </div>
+
+  <div class="w-little my-5">
+    <div class="accordion mb-3" id="accordionExample">
+      <div class="accordion-item border-info">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button bg-white colorBlue fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <i class="bi bi-geo-alt me-3 text-info fs-3"></i>Locations
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body mt-2">
+            <p class="colorGrey">{{ character.location.name }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item border-info">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button bg-white colorBlue fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+            <i class="bi bi-camera-video me-3 text-info fs-3"></i>Episodes
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body d-flex flex-column" *ngFor="let episode of character.episode">
+            <p class="colorGrey">{{ episode }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marginTopBtn">
+    <button class="btn btn-info text-white fw-bold btnBack mt-5" [routerLink]="['']">Back</button>
+  </div>
+</div>
+

@@ -1,0 +1,97 @@
+:root {
+  --verde: #48DE96;
+  --gris: #9098B1;
+  --azulOscuro: #223263;
+  --rojo: #FB7181;
+  --fondo: #F6F7F8;
+}
+
+/* Globales */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-right: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.colorGreen {
+  color: var(--verde);
+}
+
+.colorGrey {
+  color: var(--gris);
+}
+
+.colorRed {
+  color: var(--rojo);
+}
+
+.colorBlue {
+  color: var(--azulOscuro);
+}
+
+.fondo {
+  background-color: var(--fondo);
+}
+
+button:focus {
+  color: #33A0FF;
+  text-decoration: underline;
+}
+
+.btnLoad {
+  color: #33A0FF;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.btnBack {
+  padding: 1rem 23rem;
+}
+
+.imgCircle {
+  border-radius: 90%;
+  width: 122px;
+  height: 122px;
+}
+
+.marginTop {
+  margin-top: 10rem;
+}
+
+.marginTopBtn {
+  top: 30rem;
+  position: relative;
+}
+
+.w-little {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .btnBack {
+    padding: 1rem 15rem;
+  }
+
+  .marginTopBtn {
+    top: 0rem;
+    position: relative;
+  }
+
+  .w-little {
+    width: 50%;
+  }
+}
+
+

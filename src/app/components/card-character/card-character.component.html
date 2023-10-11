@@ -1,0 +1,11 @@
+<div class="card mb-1 fondo mx-md-2 mx-5">
+  <a [routerLink]="['/profile/', character.id]">
+    <img [src]="character.image" alt="" class="img-fluid rounded-3">
+  </a>
+  <div class="card-body">
+      <h4 class="text-center my-4 fw-bold colorBlue">{{character.name}}</h4>
+      <p class="text-center colorGrey pb-2 fs-4"><span class="fw-bold"
+        [ngClass]="{'colorGreen': character.status === 'Alive', 'colorRed': character.status === 'Dead', 'text-info': character.status === 'unknown'}">
+        {{character.status}}</span> | {{character.species}} | {{character.gender}}</p>
+  </div>
+</div>
