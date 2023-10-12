@@ -25,6 +25,8 @@ export class ProfileComponent {
       )
       .subscribe(character => {
         this.character = character
+        sessionStorage.setItem('profile', character.image)
+        console.log(sessionStorage.getItem('profile'))
       })
   }
 }

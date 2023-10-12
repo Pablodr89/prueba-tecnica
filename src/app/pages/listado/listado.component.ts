@@ -16,12 +16,14 @@ export class ListadoComponent implements OnInit {
   cantidad: number = 8
   url: string = ''
   max: number = 20
+  imgProf: string | null = ''
 
   constructor(private characterService: RickMortyService) {
 
   }
 
   ngOnInit(): void {
+    this.imgProf = sessionStorage.getItem('profile')
     this.characterService.getCharacters().subscribe(
       characters => {
         this.data = Object.values(characters)
