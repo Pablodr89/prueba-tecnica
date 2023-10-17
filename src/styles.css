@@ -62,7 +62,8 @@ button:focus {
 }
 
 .btnBack {
-  padding: 1rem 23rem;
+  padding: 1rem 17.5rem;
+  margin: 0 1rem 1rem;
 }
 
 .imgCircle {
@@ -76,8 +77,8 @@ button:focus {
 }
 
 .marginTopBtn {
-  top: 30rem;
-  position: relative;
+  bottom: 0;
+  position: absolute;
 }
 
 .w-little {
@@ -108,5 +109,11 @@ button:focus {
 @media (max-width: 768px) {
   .hide {
     visibility: hidden;
+  }
+  .imgProf {
+    border-radius: 90%;
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
   }
 }
